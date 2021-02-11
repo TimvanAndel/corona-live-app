@@ -1,0 +1,52 @@
+{
+    "markers" : [
+        {
+            "id": 0,
+            "sender": "Tim",
+            "desc": "beschrijving van marker",
+            "lat": 51.954184,
+            "lng": 4.962953,
+            "action": 0
+        },
+        {
+            "id": 1,
+            "sender": "andere tim",
+            "desc": "beschrijving van marker",
+            "lat": 51.951777,
+            "lng": 4.961806,
+            "action": 1
+        }
+    ],
+    "actions": [
+        {
+            "id"       : 0,
+            "action"   : "Boodschappen doen",
+            "filename" : "boodschappendoen.svg",
+            "scale"    : 1
+        },
+        {
+            "id"       : 1,
+            "action"   : "Fietsen",
+            "filename" : "fietsen.svg",
+            "scale"    : 1
+        },
+        {
+            "id"       : 2,
+            "action"   : "Hardlopen",
+            "filename" : "hardlopen.svg",
+            "scale"    : 1
+        },
+        {
+            "id"       : 3,
+            "action"   : "Hond uitlaten",
+            "filename" : "honduitlaten.svg",
+            "scale"    : 1
+        },
+        {
+            "id"       : 4,
+            "action"   : "Wandelen",
+            "filename" : "wandelen.svg",
+            "scale"    : 1
+        }
+    ]
+}

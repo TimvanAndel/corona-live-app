@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GeoLocationMapper</title></head><body onload="checkUser"><div id="root"></div><script>function checkUser(){
+            var username = getCookie('username');
+            var loggedin = false;
+            var checkLogIn = getCookie('loggedin');
+            if(checkLogIn == 1){
+                loggedin = true;
+            }
+
+            if(loggedin == true){
+
+
+            } else {
+                window.location.replace("login.php");
+            }
+        }
+
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+
+
+        window.onload = checkUser;
+        if (navigator.geolocation) {
+    // This is the location marker that we will be using on the map. Let's store a reference to it here so that it can be updated in several places.
+    var locationMarker = null;
+    var myLat = null;
+    var myLng = null;
+    var myLocation = null;
+
+    // Get the location of the user's browser using the native geolocation service.
+    navigator.geolocation.getCurrentPosition(
+        function (position) {
+            // Check to see if there is already a location. There is a bug in FireFox where this gets invoked more than once with a cached result.
+            if (locationMarker){
+                return;
+            }
+
+            // Log that this is the initial position.
+            console.log( "Initial Position Found" );
+
+            // Assign coordinates to global variables
+            myLat = position.coords.latitude;
+            myLng = position.coords.longitude;
+            myLocation = myLat + ", " + myLng;
+
+            alert(myLocation);
+            // If I alert myLocation here, the coordinates are there.
+
+        }
+    );
+}</script><script src="bundle.js"></script></body></html>
